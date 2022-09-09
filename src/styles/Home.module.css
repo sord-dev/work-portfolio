@@ -22,3 +22,13 @@
 .title p{
   letter-spacing: .2px;
 }
+
+@media only screen and (max-width: 600px) {
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 70vh;
+}
+}

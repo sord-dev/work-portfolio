@@ -8,12 +8,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Stefan Syrett - Front End Devloper</title>
+        <title>Stefan Syrett - Front End Developer</title>
         <meta
           name="description"
           content="Front end web developer based in London, UK."
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className={styles.title}>

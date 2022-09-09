@@ -11,5 +11,6 @@ export const SocialList = ({links}) => {
 
 const SocialItem = props => {
     const {linkItem} = props
-    return (<a href={linkItem.link}><img src={linkItem.imagesrc} alt={`${linkItem.name}`} /></a>)
+    // eslint-disable-next-line @next/next/no-img-element
+    return (<a href={linkItem.link} target='_blank' rel='noreferrer'><img src={linkItem.imagesrc} alt={`${linkItem.name}`} /></a>)
 }

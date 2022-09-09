@@ -4,7 +4,7 @@ import { SocialList } from "../SocialList";
 
 import { useRouter } from "next/router";
 import { SOCIAL_MEDIA_LINKS } from "../../data";
-import styles from './layout.module.css'
+import styles from "./layout.module.css";
 
 export const Layout = ({ children }) => {
   const router = useRouter();

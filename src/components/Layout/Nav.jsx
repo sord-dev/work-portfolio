@@ -1,8 +1,9 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./layout.module.css";
 
 export const Nav = () => {
+ 
   return (
     <nav className={styles.navbar}>
       <ul>
