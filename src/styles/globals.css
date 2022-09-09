@@ -1,0 +1,27 @@
+:root {
+  --text-black: #3A3B3A;
+  --text-black-dark: #1F1D1D;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Mulish', sans-serif, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+    background: linear-gradient(90deg, #fffdf7eb 1%, #faf6ebeb 100%);
+    font-size: 20px;
+    color: var(--text-black);
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+

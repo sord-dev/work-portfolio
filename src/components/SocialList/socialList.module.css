@@ -1,0 +1,17 @@
+.socialList {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: smaller;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.socialList img {
+    width: 40px;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.socialList img:hover {
+    transform: scale(.97);
+}

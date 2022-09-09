@@ -1,0 +1,24 @@
+.container {
+  padding: 0 2rem;
+}
+
+.title {
+  max-width: 500px;
+  text-align: center;
+  margin: 15% auto 0;
+}
+
+.title h1,
+.title p{
+  margin: 0;
+}
+
+.title h1{
+  font-weight: 600;
+  color: var(--text-black-dark);
+}
+
+
+.title p{
+  letter-spacing: .2px;
+}
