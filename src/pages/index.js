@@ -1,8 +1,14 @@
 import Head from "next/head";
+
+//COMPONENTS
+import { SocialList } from "../components";
+
+//STYLES
 import styles from "../styles/Home.module.css";
 
-import { SocialList } from "../components";
+//DATA
 import { SOCIAL_MEDIA_LINKS } from "../data";
+
 
 export default function Home() {
   return (

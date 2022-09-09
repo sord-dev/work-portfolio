@@ -1,7 +1,14 @@
 import Head from "next/head";
 import React from "react";
+
+//COMPONENTS
 import { ItemList } from "../components/ItemList";
+
+//STYLES
 import styles from "../styles/About.module.css";
+
+//DATA
+import { ABOUT_INERESTS_LIST, ABOUT_SKILLS_LIST } from "../data";
 
 const About = () => {
   const handleDownloadFile = () => {
@@ -34,19 +41,8 @@ const About = () => {
       <div className={styles.metadata}>
         <button onClick={handleDownloadFile}>Download My CV</button>
         <div className={styles.lists}>
-          <div>
-            <ItemList
-              title={"Skills"}
-              items={["HTML", "CSS", "Photoshop", "JavaScript", "React"]}
-            />
-          </div>
-
-          <div>
-            <ItemList
-              title={"Interests"}
-              items={["Coding", "Design", "Languages", "Video Games"]}
-            />
-          </div>
+          <ItemList title={"Skills"} items={ABOUT_SKILLS_LIST} />
+          <ItemList title={"Interests"} items={ABOUT_INERESTS_LIST} />
         </div>
       </div>
     </div>

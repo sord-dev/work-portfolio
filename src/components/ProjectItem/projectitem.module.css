@@ -1,0 +1,42 @@
+.projectItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectItem .thumbnail {
+  width: 200px;
+  height: 200px;
+  background: rgba(128, 138, 173, 0.9);
+  border-radius: 8px;
+}
+
+.projectItem h3,
+.projectItem p {
+  margin: 0;
+}
+
+.projectItem h3 {
+    margin-top: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.projectItem p {
+    font-weight: 300;
+    font-size: 16px;
+    opacity: .9;
+}
+
+.projectItem a {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.projectList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2em;
+}

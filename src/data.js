@@ -1,3 +1,5 @@
+// I think i'm just going to leave these in here so i can change the skills and links easily
+
 export const SOCIAL_MEDIA_LINKS = [
   {
     name: "Github link",
@@ -15,3 +17,7 @@ export const SOCIAL_MEDIA_LINKS = [
     link: "mailto:stefansyrett17@gmail.com",
   },
 ];
+
+
+export const ABOUT_SKILLS_LIST = ["HTML", "CSS", "Photoshop", "JavaScript", "React"];
+export const ABOUT_INERESTS_LIST = ["Coding", "Design", "Languages", "Video Games"];
