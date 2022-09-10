@@ -12,6 +12,7 @@ import {
 import { ProjectDisplay } from "../../components";
 import NotFound from "../404";
 
+
 const ProjectPage = ({ data }) => {
   const pageTitle = data
     ? `Stefan Syrett - ${data.attributes.title}`
@@ -27,7 +28,7 @@ const ProjectPage = ({ data }) => {
         <meta name="description" content={pageDesc} />
       </Head>
 
-      {data ? <ProjectDisplay project={data?.attributes} /> : <NotFound />}
+      {data ? <ProjectDisplay project={data} /> : <NotFound />}
     </div>
   );
 };

@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./projectdisplay.module.css";
+import { ItemList } from "../ItemList";
+import { LoadingSpinner } from "../LoadingSpinner";
 
 export const ProjectDisplay = ({ project }) => {
+  if(!project.attributes) return <LoadingSpinner message={'Data provided is invalid, please check component input.'}/>
+
   const {
     title,
     subtitle,
@@ -10,41 +14,42 @@ export const ProjectDisplay = ({ project }) => {
     lessonsLearned,
     architecture,
     potentialFeatures,
-  } = project;
+  } = project.attributes;
 
   return (
     <>
       <div className={styles.project_container}>
-          {/* title */}
-          <div className={styles.project_title}>
-            <h1>{title}</h1>
-            <span>{subtitle}</span>
+        <div className={styles.project_title}>
+          <h1>{title}</h1>
+          <span>{subtitle}</span>
+        </div>
+
+        <div className={styles.project_data_container}>
+          <div className={styles.project_data}>
+            <div className={styles.project_thumbnail}>thumbnail</div>
+
+            <div className={styles.lists}>
+              <ItemList
+                title={"Architecture"}
+                items={architecture.split(",")}
+              />
+              <ItemList
+                title={"Potential Future Features"}
+                items={potentialFeatures.split(",")}
+              />
+            </div>
           </div>
 
-          {/* flex container */}
-          <div className={styles.project_data_container}>
-            {/* first sect */}
-            <div className={styles.project_data}>
-              <div className={styles.project_thumbnail}>thumbnail</div>
-
-              <h3>Architecture</h3>
-              <p>{architecture}</p>
-
-              <h3>Potential Future Features</h3>
-              <p>{potentialFeatures}</p>
-            </div>
-
-            {/* secnd sect */}
-            <div className={styles.project_desc}>
-              <h2>Description</h2>
-              <p>{description}</p>
-              <h2>Features</h2>
-              <p>{features}</p>
-              <h2>Lessons Learned</h2>
-              <p>{lessonsLearned}</p>
-            </div>
+          <div className={styles.project_desc}>
+            <h2>Description</h2>
+            <p>{description}</p>
+            <h2>Features</h2>
+            <p>{features}</p>
+            <h2>Lessons Learned</h2>
+            <p>{lessonsLearned}</p>
           </div>
         </div>
+      </div>
     </>
   );
 };
