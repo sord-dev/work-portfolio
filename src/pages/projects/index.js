@@ -24,7 +24,11 @@ const Projects = ({ data }) => {
         />
       </Head>
 
-      {projects ? <ProjectList data={projects} /> : <LoadingSpinner message={'Conn Error - No Projects Found'} />}
+      {projects ? (
+        <ProjectList data={projects} />
+      ) : (
+        <LoadingSpinner message={"Conn Error - No Projects Found"} />
+      )}
     </div>
   );
 };

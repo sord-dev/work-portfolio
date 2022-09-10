@@ -13,6 +13,7 @@
 .projectItem h3,
 .projectItem p {
   margin: 0;
+  max-width: 240px;
 }
 
 .projectItem h3 {
@@ -38,6 +39,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  padding: 1em;
+  height: 78vh;
+}
+
+.projectListContainer {
+  display: flex;
   gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .projectList {
+    height: unset;
+  }
 }
