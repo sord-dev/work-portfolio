@@ -19,7 +19,7 @@ export const SOCIAL_MEDIA_LINKS = [
 ];
 
 
-export const ABOUT_SKILLS_LIST = ["HTML", "CSS", "Photoshop", "JavaScript", "React"];
+export const ABOUT_SKILLS_LIST = ["HTML", "CSS", "Photoshop", "JavaScript", "React", "NextJS"];
 export const ABOUT_INERESTS_LIST = ["Coding", "Design", "Languages", "Video Games"];
 
 
