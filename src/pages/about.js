@@ -11,11 +11,6 @@ import styles from "../styles/About.module.css";
 import { ABOUT_INERESTS_LIST, ABOUT_SKILLS_LIST } from "../data";
 
 const About = () => {
-  const handleDownloadFile = () => {
-    console.log(
-      "this will contain the functionality to send your cv to the user"
-    );
-  };
   return (
     <div className={styles.pageConatiner}>
       <Head>
@@ -33,13 +28,13 @@ const About = () => {
           <p>
             I&apos;m a London based Front End Developer specialising in React
             and NextJS. You&apos;ll usually find me coding a new project,
-            talking about it with with my friends or drinking coffee!
+            talking about it with my friends or drinking coffee!
           </p>
         </div>
       </div>
 
       <div className={styles.metadata}>
-        <button onClick={handleDownloadFile}>Download My CV</button>
+        <a href="/stefan-syrett-resume.pdf" download='Stefan Syrett - Resume'>Download My CV</a>
         <div className={styles.lists}>
           <ItemList title={"Skills"} items={ABOUT_SKILLS_LIST} />
           <ItemList title={"Interests"} items={ABOUT_INERESTS_LIST} />

@@ -1,23 +1,39 @@
 :root {
-  --text-black: #3A3B3A;
-  --text-black-dark: #1F1D1D;
+  --text-black: #3a3b3a;
+  --text-black-dark: #1f1d1d;
+  --white: #edf3f4;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Mulish', sans-serif, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
-    background: linear-gradient(90deg, #fffdf7eb 1%, #faf6ebeb 100%);
-    font-size: 20px;
-    color: var(--text-black);
-
+  font-family: "Mulish", sans-serif, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue;
+  background: linear-gradient(90deg, #fffdf7eb 1%, #faf6ebeb 100%);
+  font-size: 20px;
+  color: var(--text-black);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  position: absolute;
+  content: "";
+  background: #3a3b3a32;
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 * {
@@ -27,4 +43,3 @@ a {
 p {
   line-height: 150%;
 }
-

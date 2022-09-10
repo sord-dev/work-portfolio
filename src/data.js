@@ -21,3 +21,7 @@ export const SOCIAL_MEDIA_LINKS = [
 
 export const ABOUT_SKILLS_LIST = ["HTML", "CSS", "Photoshop", "JavaScript", "React"];
 export const ABOUT_INERESTS_LIST = ["Coding", "Design", "Languages", "Video Games"];
+
+
+export const DEFAULT_PROJECT_PAGE_TITLE = 'Stefan Syrett - Project Showcase'
+export const DEFAULT_PROJECT_PAGE_DESC = 'A project showcase page from my portfolio!'

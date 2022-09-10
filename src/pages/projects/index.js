@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { strapiConfig, strapiServer } from "../../api/server";
 
 //COMPONENTS
 import { LoadingSpinner, ProjectList } from "../../components";
@@ -14,7 +13,7 @@ const Projects = ({ data }) => {
   useEffect(() => {
     setProjects(data);
   }, [data]);
-  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -25,16 +24,25 @@ const Projects = ({ data }) => {
         />
       </Head>
 
-      {projects ? <ProjectList data={projects} /> : <LoadingSpinner />}
+      {projects ? <ProjectList data={projects} /> : <LoadingSpinner message={'Conn Error - No Projects Found'} />}
     </div>
   );
 };
 
 //DATA
+
+import { strapiConfig, strapiServer } from "../../api/server";
+
 export async function getServerSideProps() {
-  const res = await strapiServer.get("/projects", strapiConfig);
-  const props = { data: res.data.data }
-  return {props};
+  try {
+    const res = await strapiServer.get("/projects", strapiConfig);
+    return {
+      props: { data: res.data.data },
+    };
+  } catch (error) {
+    console.log(error);
+    return { props: {} };
+  }
 }
 
 export default Projects;

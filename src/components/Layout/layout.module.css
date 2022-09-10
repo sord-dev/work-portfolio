@@ -14,15 +14,6 @@
   letter-spacing: 0.2px;
 }
 
-.navbar ul li {
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.navbar ul li:hover {
-  text-decoration: underline;
-  color: var(--text-black-dark);
-}
-
 .navbar .active {
   text-decoration: underline;
 }

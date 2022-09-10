@@ -15,3 +15,7 @@
 .socialList img:hover {
     transform: scale(.97);
 }
+
+.socialList a:hover::after {
+    width: 0;
+  }

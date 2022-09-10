@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import styles from "./loading.module.css";
 
-export const LoadingSpinner = () => {
+export const LoadingSpinner = ({ message }) => {
   return (
-    <div>Loading...</div>
-  )
-}
+    <div className={styles.spinner_container}>
+      <h2>{message}</h2>
+    </div>
+  );
+};
