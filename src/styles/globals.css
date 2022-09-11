@@ -2,6 +2,7 @@
   --text-black: #3a3b3a;
   --text-black-dark: #1f1d1d;
   --white: #edf3f4;
+  --select-color: #f5ecd2eb;
 }
 
 html,
@@ -21,10 +22,15 @@ a {
   position: relative;
 }
 
+body *::selection {
+  background: var(--select-color);
+}
+
+
 a::after {
   position: absolute;
   content: "";
-  background: #3a3b3a32;
+  background: #e3d6b2be;
   height: 2px;
   width: 0%;
   bottom: 0;

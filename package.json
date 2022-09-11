@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -16,6 +17,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "cypress": "^10.7.0",
     "eslint": "8.23.0",
     "eslint-config-next": "12.3.0"
   }
