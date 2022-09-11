@@ -13,7 +13,7 @@ export const ProjectItem = (props) => {
         about={`link to ${project.title} post`}
       >
         <div className={styles.thumbnail}>
-          <Image src={project.imgurl} width={"200px"} height={"200px"} />
+          <Image src={project.imgurl} width={"200px"} height={"200px"} alt='project thumbnail' />
         </div>
       </Link>
       <h3>{project.title}</h3>
