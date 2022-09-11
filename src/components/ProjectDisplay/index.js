@@ -2,19 +2,23 @@ import React from "react";
 import styles from "./projectdisplay.module.css";
 import { ItemList } from "../ItemList";
 import { LoadingSpinner } from "../LoadingSpinner";
+import Image from "next/image";
 
 export const ProjectDisplay = ({ project }) => {
-  if(!project.attributes) return <LoadingSpinner message={'Data provided is invalid, please check component input.'}/>
+  if (!Object.keys(project).length > 0)
+    return (
+      <LoadingSpinner message="The data provided to this component is incorrect" />
+    );
 
   const {
     title,
     subtitle,
     description,
     features,
-    lessonsLearned,
+    lessons,
     architecture,
-    potentialFeatures,
-  } = project.attributes;
+    futureFeatures,
+  } = project;
 
   return (
     <>
@@ -26,7 +30,18 @@ export const ProjectDisplay = ({ project }) => {
 
         <div className={styles.project_data_container}>
           <div className={styles.project_data}>
-            <div className={styles.project_thumbnail}>thumbnail</div>
+            <div className={styles.project_thumbnail}>
+              {project.imgurl ? (
+                <Image
+                  src={project.imgurl}
+                  width={"800px"}
+                  height={"800px"}
+                  alt="project image"
+                />
+              ) : (
+                thumbnail
+              )}
+            </div>
 
             <div className={styles.lists}>
               <ItemList
@@ -35,7 +50,7 @@ export const ProjectDisplay = ({ project }) => {
               />
               <ItemList
                 title={"Potential Future Features"}
-                items={potentialFeatures.split(",")}
+                items={futureFeatures.split(",")}
               />
             </div>
           </div>
@@ -46,7 +61,7 @@ export const ProjectDisplay = ({ project }) => {
             <h2>Features</h2>
             <p>{features}</p>
             <h2>Lessons Learned</h2>
-            <p>{lessonsLearned}</p>
+            <p>{lessons}</p>
           </div>
         </div>
       </div>

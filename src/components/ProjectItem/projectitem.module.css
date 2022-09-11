@@ -6,8 +6,19 @@
 .projectItem .thumbnail {
   width: 200px;
   height: 200px;
-  background: rgba(128, 138, 173, 0.9);
+  background: var(--white);
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.projectItem .thumbnail img{
+  border-radius: 8px;
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.projectItem .thumbnail img:hover {
+  scale: 1.06;
+  opacity: .8;
 }
 
 .projectItem h3,

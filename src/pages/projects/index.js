@@ -33,15 +33,13 @@ const Projects = ({ data }) => {
   );
 };
 
-//DATA
-
-import { strapiConfig, strapiServer } from "../../api/server";
+import axios from "axios";
 
 export async function getServerSideProps() {
   try {
-    const res = await strapiServer.get("/projects", strapiConfig);
+    const res = await axios.get('http://localhost:3000/api/projects');
     return {
-      props: { data: res.data.data },
+      props: { data: res.data },
     };
   } catch (error) {
     console.log(error);
