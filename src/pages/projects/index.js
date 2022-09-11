@@ -6,6 +6,8 @@ import { LoadingSpinner, ProjectList } from "../../components";
 
 //STYLES
 import styles from "../../styles/Projects.module.css";
+import { BackEndAPI } from "../../utils/axios";
+
 
 const Projects = ({ data }) => {
   const [projects, setProjects] = useState(null);
@@ -33,11 +35,10 @@ const Projects = ({ data }) => {
   );
 };
 
-import axios from "axios";
 
 export async function getServerSideProps() {
   try {
-    const res = await axios.get('http://localhost:3000/api/projects');
+    const res = await BackEndAPI.get('/api/projects');
     return {
       props: { data: res.data },
     };

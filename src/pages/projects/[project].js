@@ -11,6 +11,7 @@ import {
 import { ProjectDisplay } from "../../components";
 import NotFound from "../404";
 import axios from "axios";
+import { BackEndAPI } from "../../utils/axios";
 
 
 const ProjectPage = ({ data }) => {
@@ -39,7 +40,7 @@ export async function getServerSideProps(req) {
   try {
     const projectId = req.query.project;
     console.log(projectId)
-    const response = await axios.get(`http://localhost:3000/api/projects/${projectId}`);
+    const response = await BackEndAPI.get(`/api/projects/${projectId}`);
     console.log(response)
     return {
       props: { data: response.data },
