@@ -5,6 +5,12 @@
 }
 
 
+.live_buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
 .project_title {
 margin-bottom: 10px;
 }
@@ -59,6 +65,10 @@ margin-bottom: 10px;
     margin: 0 auto;
   }
 
+  .project_thumbnail img {
+    border-radius: 8px;
+  }
+
   .project_data_container {
     flex-direction: column;
     justify-content: center;
@@ -69,7 +79,7 @@ margin-bottom: 10px;
     flex-direction: row;
     font-size: 0.9em;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
   }
 
   .lists ul {
@@ -91,4 +101,6 @@ margin-bottom: 10px;
   .project_data .lists h3 {
     font-size: 0.9em;
   }
+
+  
 }

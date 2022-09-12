@@ -1,4 +1,4 @@
-// I think i'm just going to leave these in here so i can change the skills and links easily
+// I think i'm just going to leave these in here so i can change the skills and links easily 
 
 export const SOCIAL_MEDIA_LINKS = [
   {

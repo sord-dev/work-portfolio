@@ -8,3 +8,5 @@ export * from "./ProjectItem";
 export * from "./ProjectDisplay";
 
 export * from "./LoadingSpinner";
+
+export * from './Button'

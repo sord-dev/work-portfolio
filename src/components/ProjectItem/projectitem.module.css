@@ -4,7 +4,7 @@
 }
 
 .projectItem .thumbnail {
-  width: 200px;
+  width: 250px;
   height: 200px;
   background: var(--white);
   border-radius: 8px;
@@ -24,7 +24,7 @@
 .projectItem h3,
 .projectItem p {
   margin: 0;
-  max-width: 240px;
+  max-width: 250px;
 }
 
 .projectItem h3 {

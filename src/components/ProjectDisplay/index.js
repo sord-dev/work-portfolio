@@ -3,6 +3,7 @@ import styles from "./projectdisplay.module.css";
 import { ItemList } from "../ItemList";
 import { LoadingSpinner } from "../LoadingSpinner";
 import Image from "next/image";
+import { Button } from "../Button";
 
 export const ProjectDisplay = ({ project }) => {
   if (!Object.keys(project).length > 0)
@@ -34,13 +35,21 @@ export const ProjectDisplay = ({ project }) => {
               {project.imgurl ? (
                 <Image
                   src={project.imgurl}
-                  width={"800px"}
-                  height={"800px"}
+                  width={"850px"}
+                  height={"850px"}
                   alt="project image"
                 />
               ) : (
                 thumbnail
               )}
+            </div>
+            
+            <div className={styles.live_buttons}>
+           {project.liveLink && <Button size={'sm'} text={'Live Site'} href={project.liveLink} />}
+           {project.githubLink && <Button size={'sm'} text={'Github'} href={project.githubLink} /> }
+
+           
+            
             </div>
 
             <div className={styles.lists}>
